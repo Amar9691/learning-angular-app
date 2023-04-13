@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'learning';
+  message :string = '';
+
+  onNotify(event:any):void {
+     this.message = event;
+  }
 }
