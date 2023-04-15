@@ -4,7 +4,10 @@
         <div class="col-md-8 p-4 mx-auto">
             <h1 class="text-center">Learning Part 1</h1>
             <h4 class="text-center">Passing data from child to parent Component</h4>
-            <app-child master="Amar" class="mx-auto" (notify)="onNotify($event)"></app-child>
+            <app-child master="Amar" class="mx-auto" (notify)="onNotify($event)">
+              This is single slot content projection
+              <div mt>hello</div>
+            </app-child>
             <h1>THis is parent handing</h1>
         </div>
 
