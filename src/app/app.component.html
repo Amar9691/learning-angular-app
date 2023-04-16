@@ -3,6 +3,10 @@
 	<div class="row">
 		<div class="col-md-8 p-4 mx-auto">
 			<h1 class="text-center">Learning Part 1</h1>
+      <label>Type something:
+        <input #phone type="number" placeholder="phone number"/>
+        <button type="button" (click)="getNumber(phone)">Call</button>
+      </label>
 			<h4 class="text-center">Passing data from child to parent Component</h4>
 			<app-child master="Amar" class="mx-auto" (notify)="onNotify($event)">
 				This is single slot content projection
@@ -22,6 +26,7 @@
 			<div class="card-footer">
 				 <h4>Dynamic Banner</h4>
 				 <app-addbanner [addItem]="addItem"></app-addbanner>
+         <button (click)="loadCom()">Load</button>
 			</div>
 		</div>
 

@@ -8,6 +8,7 @@ import { AddbannerComponent } from './addbanner/addbanner.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { AppDirective } from './app.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AppDirective } from './app.directive';
     AddbannerComponent,
     FirstComponent,
     SecondComponent,
-    AppDirective
+    AppDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

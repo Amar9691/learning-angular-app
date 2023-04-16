@@ -22,4 +22,10 @@ export class AppComponent implements OnInit{
       this.addItem = this.mange.getItem();
   }
 
+  loadCom(){
+      this.mange.createAsComponent();
+  }
+  getNumber(no:number){
+    console.log(no);
+  }
 }
