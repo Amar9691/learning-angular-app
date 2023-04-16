@@ -25,7 +25,5 @@ export class AppComponent implements OnInit{
   loadCom(){
       this.mange.createAsComponent();
   }
-  getNumber(no:number){
-    console.log(no);
-  }
+
 }
