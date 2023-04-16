@@ -4,11 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ChildComponent } from './child/child.component';
+import { AddbannerComponent } from './addbanner/addbanner.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+import { AppDirective } from './app.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent
+    ChildComponent,
+    AddbannerComponent,
+    FirstComponent,
+    SecondComponent,
+    AppDirective
   ],
   imports: [
     BrowserModule,

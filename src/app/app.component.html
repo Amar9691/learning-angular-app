@@ -1,26 +1,31 @@
 <!-- Toolbar -->
 <div class="container" role="banner">
-    <div class="row">
-        <div class="col-md-8 p-4 mx-auto">
-            <h1 class="text-center">Learning Part 1</h1>
-            <h4 class="text-center">Passing data from child to parent Component</h4>
-            <app-child master="Amar" class="mx-auto" (notify)="onNotify($event)">
-              This is single slot content projection
-              <div mt>hello</div>
-            </app-child>
-            <h1>THis is parent handing</h1>
-        </div>
+	<div class="row">
+		<div class="col-md-8 p-4 mx-auto">
+			<h1 class="text-center">Learning Part 1</h1>
+			<h4 class="text-center">Passing data from child to parent Component</h4>
+			<app-child master="Amar" class="mx-auto" (notify)="onNotify($event)">
+				This is single slot content projection
+				<div mt>hello</div>
+			</app-child>
+			<h1>THis is parent handing</h1>
+		</div>
 
-        <div class="card card-primary" *ngIf="message">
-            <div class="card-header">
-                <p class="card-title">Message From Client</p>
-            </div>
-            <div class="card-body">
-                  {{message}}
-            </div>
-        </div>
+		<div class="card card-primary" *ngIf="message">
+			<div class="card-header">
+				<p class="card-title">Message From Client</p>
+			</div>
+			<div class="card-body">
+				{{message}}
+			</div>
+
+			<div class="card-footer">
+				 <h4>Dynamic Banner</h4>
+				 <app-addbanner [addItem]="addItem"></app-addbanner>
+			</div>
+		</div>
 
 
-    </div>
+	</div>
 </div>
 <router-outlet></router-outlet>
