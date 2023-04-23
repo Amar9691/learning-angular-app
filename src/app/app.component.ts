@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,NgModule} from '@angular/core';
 import { Item } from './item';
 import { ManageService } from './manage.service';
 
@@ -9,10 +9,11 @@ import { ManageService } from './manage.service';
 })
 export class AppComponent implements OnInit{
 
+  count = 1;
   addItem : Item[] = [];
   title = 'learning';
   message: string = '';
-
+  submitMessage:string = '';
   constructor(private mange:ManageService){}
   onNotify(event: any): void {
     this.message = event;
@@ -24,6 +25,19 @@ export class AppComponent implements OnInit{
 
   loadCom(){
       this.mange.createAsComponent();
+  }
+
+  onSubmit(obj:any){
+    console.log(obj);
+  }
+
+  getValue(){
+    console.log("ok")
+  }
+
+  callPhone(num:string){
+    console.log(num);
+    this.count++;
   }
 
 }

@@ -1,34 +1,22 @@
 <!-- Toolbar -->
 <div class="container" role="banner">
-	<div class="row">
-		<div class="col-md-8 p-4 mx-auto">
-			<h1 class="text-center">Learning Part 1</h1>
-      <label>Type something:
-      </label>
-			<h4 class="text-center">Passing data from child to parent Component</h4>
-			<app-child master="Amar" class="mx-auto" (notify)="onNotify($event)">
-				This is single slot content projection
-				<div mt>hello</div>
-			</app-child>
-			<h1>THis is parent handing</h1>
-		</div>
-
-		<div class="card card-primary" *ngIf="message">
-			<div class="card-header">
-				<p class="card-title">Message From Client</p>
-			</div>
-			<div class="card-body">
-				{{message}}
-			</div>
-
-			<div class="card-footer">
-				 <h4>Dynamic Banner</h4>
-				 <app-addbanner [addItem]="addItem"></app-addbanner>
-         <button (click)="loadCom()">Load</button>
-			</div>
-		</div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <input #phone placeholder="phone number" />
+      <!-- lots of other elements -->
 
 
-	</div>
+      <div [ngSwitch]="count">
+           <h1 *ngSwitchCase="'1'">Hello 1</h1>
+           <h2 *ngSwitchCase="'2'">Hello 2</h2>
+           <h3 *ngSwitchCase="'3'">Hello 3</h3>
+           <h4 *ngSwitchCase="'4'">Hello 4</h4>
+           <h5 *ngSwitchDefault>Hello Default</h5>
+      </div>
+
+      <!-- phone refers to the input element; pass its `value` to an event handler -->
+      <button type="button" (click)="callPhone(phone.value)">Call</button>
+    </div>
+  </div>
 </div>
 <router-outlet></router-outlet>

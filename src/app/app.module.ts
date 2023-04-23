@@ -18,7 +18,7 @@ import { CustomComponent } from './custom/custom.component';
     FirstComponent,
     SecondComponent,
     AppDirective,
-    CustomComponent
+    CustomComponent,
   ],
   imports: [
     BrowserModule,
